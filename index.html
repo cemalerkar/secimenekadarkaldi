@@ -1,0 +1,65 @@
+<script src="https://kit.fontawesome.com/4f269f9571.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="mainstyle.css">
+<link rel="stylesheet" href="java.js">
+<title>Seçim 2023</title>
+
+<html>
+    <body>
+        <div class="bgimage"></div>
+        <div>
+            <p class="logos">
+                <a href="https://wa.me/905453886941?text=Minik%20Yazılımcı" class="a"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/cemalerkarr" class="a"><i class="fab fa-instagram"></i></a>
+            </p>
+            <div class="bgtext">
+                <p>Seçime son:</p>
+                <span class="yuvarlaklar"><p id="gun" class="gunaytext"></p><p class="gunayyil" id="g">Gün</p></span>
+                <span class="yuvarlaklar"><p id="saat" class="gunaytext"></p><p class="gunayyil" id="s">Saat</p></span>
+                <span class="yuvarlaklar"><p id="dakika" class="gunaytext"></p><p class="gunayyil" id="d">Dakika</p></span>
+                <span class="yuvarlaklar"><p id="saniye" class="gunaytext"></p><p class="gunayyil" id="sn">Saniye</p></span>
+                <p class="madeby">Made by Cemal Erkar with lots of ❤ </p>
+            </div>
+            <script>
+                var countDownDate = new Date("Nov 19, 2021 16:14:15").getTime();
+                var x = setInterval(function() {
+                    var now = new Date().getTime();
+                    var distance = countDownDate - now;
+
+                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                    document.getElementById("demo").innerHTML = days + "g " + hours + "s " + minutes + "d " + seconds + "sn ";
+                    document.getElementById("gun").innerHTML = days;
+                    document.getElementById("saat").innerHTML = hours;
+                    document.getElementById("dakika").innerHTML = minutes;
+                    document.getElementById("saniye").innerHTML = seconds;
+                    if (distance < 0, -86400000 < distance) {
+                        clearInterval(x);
+                        document.getElementById("demo").innerHTML = "ZAMAN DOLDU!";
+                        document.getElementById("gun").innerHTML = "BU";
+                        document.getElementById("saat").innerHTML = "GÜN";
+                        document.getElementById("dakika").innerHTML = "SEÇİM";
+                        document.getElementById("saniye").innerHTML = "GÜNÜ";
+                        document.getElementById("g").innerHTML = "";
+                        document.getElementById("s").innerHTML = "";
+                        document.getElementById("d").innerHTML = "";
+                        document.getElementById("sn").innerHTML = "";
+
+                    }
+                    else if (distance < -86400000) {
+                        document.getElementById("gun").innerHTML = "SEÇİM";
+                        document.getElementById("saat").innerHTML = "GÜNÜ";
+                        document.getElementById("dakika").innerHTML = "SONA";
+                        document.getElementById("saniye").innerHTML = "ERDİ";
+                        document.getElementById("g").innerHTML = "";
+                        document.getElementById("s").innerHTML = "";
+                        document.getElementById("d").innerHTML = "";
+                        document.getElementById("sn").innerHTML = "";
+                    }
+                }, 1000);
+            </script>
+        </div>
+    </body>
+    <p id="demo" style="color: transparent;"></p>
+</html>
