@@ -19,7 +19,7 @@
                 <p class="madeby">Made by Cemal Erkar with lots of ❤ </p>
             </div>
             <script>
-                var countDownDate = new Date("Jun 18, 2029 00:00:00").getTime();
+                var countDownDate = new Date("Jun 18, 2023 00:00:00").getTime();
                 var x = setInterval(function() {
                     var now = new Date().getTime();
                     var distance = countDownDate - now;
@@ -34,7 +34,7 @@
                     document.getElementById("saat").innerHTML = hours;
                     document.getElementById("dakika").innerHTML = minutes;
                     document.getElementById("saniye").innerHTML = seconds;
-                    if (distance < 0, -86400000 < distance) {
+                    if (distance < 0) {
                         clearInterval(x);
                         document.getElementById("demo").innerHTML = "ZAMAN DOLDU!";
                         document.getElementById("gun").innerHTML = "BU";
