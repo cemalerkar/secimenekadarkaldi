@@ -1,2 +1,2 @@
 # Seçime Ne Kadar Kaldı?
-Gelecek Türkiye seçimlerine kaç gün, saat, dakika ve saniye kaldığını gösteren bilgilendirici website.
+This project is made for next Turkey Election. You can track countdown with this project.
